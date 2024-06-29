@@ -1,16 +1,16 @@
 /* Existing CSS */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-body{
+body {
     color: #ededed;
-    background: linear-gradient(to right, #225046, #517752,#97BD8A );
+    background: linear-gradient(to right, #225046, #517752, #97BD8A);
 }
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@ body{
     align-items: center;
     z-index: 100;
 }
-.logo{
+.logo {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
@@ -31,7 +31,7 @@ body{
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 25px;
     color: #fff;
@@ -43,10 +43,10 @@ body{
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
-.navbar a:hover{
+.navbar a:hover {
     color: #E0A94E;
 }
-.home{
+.home {
     position: relative;
     width: 100%;
     justify-content: space-between;
@@ -55,7 +55,7 @@ body{
     align-items: center;
     padding: 70px 10% 0;
 }
-.home-content{
+.home-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,37 +63,41 @@ body{
 }
 .left {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 10px;
 }
 .right {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
 }
 .profile-photo {
-    max-width: 80%;
-    /* padding-top:0.3cm; */
+    max-width: 100%;
     height: auto;
     border-radius: 10%;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
-.home-content h3{
+.img-wrapper1 {
+    max-width: 630px;
+    width: 80%;                       
+    overflow: hidden; 
+    border-radius: 20%;
+}
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
 }
-.home-content h3:nth-last-of-type(2){
+.home-content h3:nth-last-of-type(2) {
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
-.home-content h3 span{
-    color:#E0A94E;
+.home-content h3 span {
+    color: #E0A94E;
 }
-.home-content h1{
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
@@ -101,13 +105,13 @@ body{
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
-.home-content p{
+.home-content p {
     font-size: 20px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
-.home-sci a{
+.home-sci a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -125,12 +129,12 @@ body{
     animation-delay: calc(.2s * var(--i));
     margin: 30px 15px 30px 0;
 }
-.home-sci a:hover{
+.home-sci a:hover {
     background: #E0A94E;
     color: #081b29;
     box-shadow: 0 0 20px #E0A94E;
 }
-.btn-box{
+.btn-box {
     display: inline-block;
     padding: 12px 28px;
     background: #E0A94E;
@@ -146,7 +150,30 @@ body{
     box-shadow: 0 0 5px #E0A94E,
     0 0 25px #E0A94E;
 }
-.btn-box:hover{
+.btn-box:hover {
+    box-shadow: 0 0 5px #EBD1A2,
+    0 0 25px #EBD1A2, 0 0 50px #EBD1A2,
+    0 0 100px #EBD1A2, 0 0 200px #EBD1A2;
+}
+.btn-resume {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #E0A94E;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px; /* Adjust the margin as needed */
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2.5s;
+    box-shadow: 0 0 5px #E0A94E,
+    0 0 25px #E0A94E;
+    transition: box-shadow 0.3s ease;
+}
+.btn-resume:hover {
     box-shadow: 0 0 5px #EBD1A2,
     0 0 25px #EBD1A2, 0 0 50px #EBD1A2,
     0 0 100px #EBD1A2, 0 0 200px #EBD1A2;
@@ -167,15 +194,16 @@ body{
     padding: 15% 0; 
 }
 
-.img-wrapper {
+
+.img-wrapper2 {
     max-width: 630px;
-    width: 50%;
+    width: 70%;
     overflow: hidden; 
     border-radius: 20%;
 }
 
-.img-wrapper img {
-    width: 100%;
+.img-wrapper2 img {
+    width: 80%;
     height: auto;
     display: block; 
     border-radius: 20%;
@@ -345,7 +373,7 @@ section{
     width: 80%;
 }
 .progress-line.javaScript span{
-    width: 70%;
+    width: 50%;
 }
 .progress-line.java span{
     width: 65%;
@@ -372,7 +400,7 @@ section{
     content: "80%";
 }
 .progress-line.javaScript span::after{
-    content: "70%";
+    content: "50%";
 }
 .progress-line.java span::after{
     content: "65%";
